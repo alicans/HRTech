@@ -1,0 +1,2 @@
+# HRTech İnsan Kaynakları Yönetim Sistemi
+Web tarayıcılardan erişilebilen insan kaynakları yönetim uygulamasıdır. Personel ve yöneticinin erişimine sahip iki arayüzü bulunmaktadır. Personel , yöneticiden izin, avans ve harcama taleplerinde bulunabilir, bazı kişisel özelliklerinin güncelleyebilir. Yönetici ise şirket hakkındaki istatistik bilgilerini görüntüleyebilir, personellerden gelen talepleri cevaplandırabilir ve yine kişisel özelliklerini güncelleyebilmektedir.
