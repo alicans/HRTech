@@ -1,0 +1,41 @@
+﻿@using ApplicationCore.Entities
+@using ApplicationCore.Enums
+@model Izin
+
+@{
+    ViewData["Title"] = "Yeni İzin Ekle";    
+}
+
+<div class="p-3 m-5 bg-info bg-gradient text-white justify-content-center d-flex align-items-center">
+    <h4>İzin Talebi Oluştur</h4>
+</div>
+
+<form asp-action="IzinEkle" method="post">
+    <div class="border border-info rounded p-3 m-5" style="background-color:dodgerblue;color:white">
+        <div class="form-group mb-3">
+            <label asp-for="Turu">İzin Türü:</label>
+            <select asp-for="Turu" class="form-control" required>
+                <option value="">Seçiniz</option>
+                <option value="@((int)IzinTuru.Hastalik)">Hastalık İzni</option>
+                <option value="@((int)IzinTuru.Babalik)">Babalık İzni</option>
+                <option value="@((int)IzinTuru.Hamilelik)">Hamilelik İzni</option>
+                <option value="@((int)IzinTuru.Olum)">Ölüm İzni</option>
+                <option value="@((int)IzinTuru.Diger)">Diğer</option>
+            </select>
+            <span asp-validation-for="Turu" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="BaslangicTarihi">Başlangıç Tarihi:</label>
+            <input asp-for="BaslangicTarihi" class="form-control" type="date" required>
+            <span asp-validation-for="BaslangicTarihi" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="BitisTarihi">Bitiş Tarihi:</label>
+            <input asp-for="BitisTarihi" class="form-control" type="date" required>
+            <span asp-validation-for="BitisTarihi" class="text-danger"></span>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success">İzni Ekle</button>
+        </div>
+    </div>
+</form>

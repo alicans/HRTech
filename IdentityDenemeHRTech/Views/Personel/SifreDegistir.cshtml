@@ -1,0 +1,27 @@
+﻿@model ChangePasswordViewModel
+
+<div class="p-2 my-3 bg-info bg-gradient text-white justify-content-center d-flex align-items-center">
+    <h4>Şifre Değiştir</h4>
+</div>
+
+<form method="post">
+    <div class="border border-info rounded p-3 m-5">
+        <div class="form-group">
+            <label>Eski Şifre</label>
+            <input type="text" class="form-control" asp-for="EskiSifre">          
+        </div>
+        <div class="form-group">
+            <label>Yeni Şifre</label>
+            <input type="text" class="form-control" asp-for="Sifre">  
+            <span asp-validation-for="Sifre" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Yeni Şifre Tekrar</label>
+            <input type="text" class="form-control" asp-for="SifreTekrar">
+            <span asp-validation-for="SifreTekrar" class="text-danger"></span>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary mt-4">Şifre Değiştir</button>
+        </div>
+    </div>
+</form>
